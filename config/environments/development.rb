@@ -35,3 +35,7 @@ Scratch::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+  
+# kludge for ease of development on windows
+# https://github.com/intridea/omniauth/issues/260
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
