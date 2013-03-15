@@ -4,7 +4,9 @@ gem 'rails', '3.2.12'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'fbgraph'
 gem 'jquery-rails'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
