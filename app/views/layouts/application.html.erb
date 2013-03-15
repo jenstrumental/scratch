@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Scratch</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Scratch</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<% if current_user && current_user.has_beta_access? %>
+	<div id="top_nav">
+		<h1>Scratch</h1>
+		<div id="top_tray">
+			<span class="name"><%= current_user.name %></span> |
+			<%= current_user.balance %> scratch |
+			<%= link_to "Log out", destroy_user_session_path %>
+		</div>
+	</div>
+	<% end %>
+
+	<%= yield %>
 
 </body>
 </html>
