@@ -9,6 +9,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
 
+  has_many :transactions, :foreign_key => "debitee_id"
+  has_many :transactions, :foreign_key => "creditee_id"
+
+  validates_numericality_of :balance, :only_integer => true, :greater_than_or_equal_to => 0
+
+
   BETA_FBUIDS = [1218195 #jen
   				]
 
@@ -27,5 +33,15 @@ class User < ActiveRecord::Base
 
   def has_beta_access?
   	self.provider == "facebook" && BETA_FBUIDS.include?(self.uid)
+  end
+
+  def credit(amount)
+    self.balance += amount
+    self.save!
+  end
+
+  def debit(amount)
+    self.balance -= amount
+    self.save!
   end
 end
