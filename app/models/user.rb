@@ -46,4 +46,9 @@ class User < ActiveRecord::Base
     self.balance -= amount
     self.save!
   end
+
+  def transfers
+    Transaction.where("creditee_id = #{self.id} or debitee_id = #{self.id}").where(:type => "Transfer")
+  end
+
 end

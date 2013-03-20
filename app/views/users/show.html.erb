@@ -1,3 +1,23 @@
 <h1><%= @user.name %></h1>
 
-Some stuff goes in here.
+<h3>Transaction History</h3>
+
+<% ts = @user.transfers %>
+<% unless ts.empty? %>
+<table>
+	<tr>
+		<th>Amount</th>
+		<th>Date</th>
+		<th>Giver</th>
+		<th>Recipient</th>
+	</tr>
+	<% ts.each do |t| %>
+	<tr>
+		<td><%= t.amount %></td>
+		<td><%= t.created_at %></td>
+		<td><%= t.debitee.name %></td>
+		<td><%= t.creditee.name %></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>
