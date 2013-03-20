@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   def index
   	if user_signed_in?
   		if current_user.has_beta_access?
+        @requests = Post.where(:completed => false)
   			render :template => "home/index"
   		else 
   		    render :template => "home/thanks"

@@ -1,1 +1,10 @@
 <p><%= current_user.name %>, you are extra special.  You are in the private beta.</p>
+
+<% unless @requests.empty? %>
+  <h3>Requests</h3>
+  <% @requests.each do |p| %>
+    <div class="request">
+ 	  <%= p.author.name %> wants <%= p.title %>
+    </div>
+  <% end %>
+<% end %>

@@ -1,9 +1,10 @@
 class Transfer < Transaction
-  validates_presence_of :creditee_id, :debitee_id
+  validates_presence_of :creditee_id, :debitee_id, :post_id
   validate :check_debitee_funds
 
   belongs_to :creditee, :class_name => "User"
   belongs_to :debitee, :class_name => "User"
+  belongs_to :post, :class_name => "post_id"
 
   attr_accessible :creditee_id, :debitee_id
 

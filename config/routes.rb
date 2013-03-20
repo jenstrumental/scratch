@@ -1,13 +1,9 @@
 Scratch::Application.routes.draw do
-  resources :posts
-
-
-  resources :transactions
-
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   match 'users/:id' => 'users#show'
+  match 'posts/:id' => 'posts#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
