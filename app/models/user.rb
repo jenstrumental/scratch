@@ -14,9 +14,11 @@ class User < ActiveRecord::Base
 
   validates_numericality_of :balance, :only_integer => true, :greater_than_or_equal_to => 0
 
+  validates_presence_of :name 
 
   BETA_FBUIDS = [1218195 #jen
   				]
+
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first

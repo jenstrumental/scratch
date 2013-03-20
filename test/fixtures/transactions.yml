@@ -4,3 +4,29 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+
+jen_to_bob:
+  id: 1
+  creditee_id: 2
+  debitee_id: 1
+  amount: 5
+  type: "Transfer"
+
+bob_to_jen:
+  id: 2
+  creditee_id: 1
+  debitee_id: 2
+  amount: 2
+  type: "Transfer"
+
+jen_credit:
+  id: 3
+  creditee_id: 1
+  amount: 3
+  type: "Adjustment"
+
+jen_debit:
+  id: 4
+  creditee_id: 1
+  amount: 1
+  type: "Adjustment"

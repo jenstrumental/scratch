@@ -1,0 +1,19 @@
+todo
+
+- build view of transaction stream for user page
+
+- make posts
+- populate with test posts
+- build view of posts for main page
+
+- make reviews
+- populate with test reviews
+- build views for reviews
+
+
+
+done
+
+- make and test transactions
+- populate with test users
+- populate db with test transactions

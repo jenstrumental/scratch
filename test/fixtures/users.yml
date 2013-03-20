@@ -4,10 +4,14 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-jen: 
+jen:
+  id: 1 
   email: "fake1@example.com"
   balance: 115
+  name: "Fake Jen"
 
 bob:
+  id: 2
   email: "fak3@example.com"
   balance: 0
+  name: "Fake Bob"
