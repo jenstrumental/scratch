@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315223131) do
+ActiveRecord::Schema.define(:version => 20130320090648) do
+
+  create_table "posts", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "deadline"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "bounty"
+  end
 
   create_table "transactions", :force => true do |t|
     t.string   "type"
@@ -20,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130315223131) do
     t.integer  "amount"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "post_id"
   end
 
   create_table "users", :force => true do |t|

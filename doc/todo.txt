@@ -1,15 +1,27 @@
 todo
 
-- build view of transaction stream for user page
-
 - make posts
-- populate with test posts
 - build view of posts for main page
+- build post form, put button on main page
+
+- make post comments
+- populate with test comments
+- build view of comments for post pages
+- build comment form for post pages
+
+- add "accept" button
+- email both parties when comment is accepted
+- email both parties when post expiration date is reached
 
 - make reviews
 - populate with test reviews
 - build views for reviews
 
+- differentiate own page and other person's page; all show history of posts and associated transactions, only own page shows system history
+
+- style landing page
+- style home page
+- style user page
 
 
 done
@@ -17,3 +29,6 @@ done
 - make and test transactions
 - populate with test users
 - populate db with test transactions
+- build view of transaction stream for user page
+
+- populate with test posts

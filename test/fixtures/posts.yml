@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  author_id: 1
+  title: Take me to the airport
+  content: I need to go to the airport this coming Thursday at 5pm.  I'm really nice.  Give me a ride from Summerlin?
+  deadline: 2013-03-22 22:27:41
+  bounty: 2
+
+two:
+  author_id: 2
+  title: Design a flyer for my band
+  content: It needs to look really cool.  Cause we're really cool.
+  deadline: 2013-03-23 22:27:41
+  bounty: 4
