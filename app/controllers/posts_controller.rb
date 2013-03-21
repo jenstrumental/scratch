@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = Post.new
+    @post = Post.new(:author_id => current_user.id, :deadline => Time.now + 7.days)
 
     respond_to do |format|
       format.html # new.html.erb

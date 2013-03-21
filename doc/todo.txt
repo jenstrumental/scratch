@@ -1,6 +1,5 @@
 todo
 
-- make posts
 - build view of posts for main page
 - build post form, put button on main page
 
@@ -30,5 +29,5 @@ done
 - populate with test users
 - populate db with test transactions
 - build view of transaction stream for user page
-
 - populate with test posts
+- make posts

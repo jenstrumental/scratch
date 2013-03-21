@@ -11,10 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :author_id %><br />
-    <%= f.number_field :author_id %>
-  </div>
+  <%= f.hidden_field :author_id %>
+    
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -22,6 +20,10 @@
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :bounty %><br />
+    <%= f.select :bounty, (1..10) %>
   </div>
   <div class="field">
     <%= f.label :deadline %><br />
