@@ -29,6 +29,12 @@
 <% unless @post.comments.empty? %>
   <% @post.comments.each do |c| %>
     <div class="comment">
+    	<% if current_user == @post.author %>
+    	  <%= form_tag('/posts/accept_offer') %>
+    	    <%= hidden_field_tag :comment_id, c.id %>
+    	    <%= submit_tag "Accept this Offer" %>
+    	  </form>
+    	<% end %>
     	<%= c.user.name %> said, "<%= c.comment %>" 
     	(<%= time_ago_in_words c.created_at %> ago)
     </div>

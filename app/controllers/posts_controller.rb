@@ -25,13 +25,20 @@ class PostsController < ApplicationController
 
   def comment
     @comment = Comment.new
-    @comment.comment = params[:comment]
+    @comment.comment = params[:comment] 
     @comment.user_id = current_user.id
     @comment.commentable_id = params[:id]
     @comment.commentable_type = "Post"
     @comment.save!
     redirect_to :action => 'show', :id => params[:id]
   end
+ 
+  def accept_offer                                          
+    @comment = Comment.find(params[:comment_id])
+    @comment.accepted = true
+    @comment.save!
+    redirect_to :action => "show", :id => @comment.commentable_id
+  end  
 
   # GET /posts/new
   # GET /posts/new.json

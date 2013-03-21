@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321013307) do
+ActiveRecord::Schema.define(:version => 20130321044832) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20130321013307) do
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.integer  "user_id"
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+    t.boolean  "accepted",                       :default => false
   end
 
   add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
@@ -36,6 +37,15 @@ ActiveRecord::Schema.define(:version => 20130321013307) do
     t.datetime "updated_at",                    :null => false
     t.integer  "bounty"
     t.boolean  "completed",  :default => false
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "comment_id"
+    t.integer  "reviewer_id"
+    t.integer  "score"
+    t.text     "comment"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "transactions", :force => true do |t|

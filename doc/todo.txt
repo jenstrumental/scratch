@@ -1,17 +1,8 @@
 todo
 
-- populate with test comments
-
-- add "accept" button
-- email both parties when comment is accepted
-- email both parties when post expiration date is reached
-
-- make reviews
 - populate with test reviews
 - build views for reviews
-
-- differentiate own page and other person's page; all show history of posts and associated transactions, only own page shows system history
-- differentiate archived posts from active ones
+- think through models around comments, posts, active/pending/finished
 
 
 - style landing page
@@ -19,6 +10,15 @@ todo
 - style own user page
 - style other user page
 - style post page
+
+
+- differentiate own page and other person's page; all show history of posts and associated transactions, only own page shows system history
+- differentiate archived posts from active ones
+- differentiate accepted post from non-accepted ones
+
+
+- email both parties when comment is accepted
+- email both parties when post expiration date is reached
 
 done
 
@@ -33,3 +33,6 @@ done
 - make post comments
 - build view of comments for post pages
 - build comment form for post pages
+- populate with test comments
+- add "accept" button
+- make reviews
