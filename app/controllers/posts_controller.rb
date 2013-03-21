@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :require_beta_access
   # GET /posts
   # GET /posts.json
   def index
