@@ -6,7 +6,7 @@
   <h3>Requests</h3>
   <% @requests.each do |p| %>
     <div class="request">
- 	  <%= p.author.name %> wants <%= p.title %>
+ 	  <%= link_to "#{p.author.name} wants #{p.title}", p %>
     </div>
   <% end %>
 <% end %>

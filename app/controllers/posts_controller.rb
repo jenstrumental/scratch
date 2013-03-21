@@ -14,11 +14,22 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
     end
+  end
+
+  def comment
+    @comment = Comment.new
+    @comment.comment = params[:comment]
+    @comment.user_id = current_user.id
+    @comment.commentable_id = params[:id]
+    @comment.commentable_type = "Post"
+    @comment.save!
+    redirect_to :action => 'show', :id => params[:id]
   end
 
   # GET /posts/new

@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  acts_as_commentable
+  
   attr_accessible :author_id, :content, :deadline, :title, :bounty
 
   validates_presence_of :author_id, :content, :title, :bounty

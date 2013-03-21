@@ -7,6 +7,7 @@ gem 'omniauth-facebook'
 gem 'fbgraph'
 gem 'jquery-rails'
 gem 'devise'
+gem 'acts_as_commentable', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -1,12 +1,6 @@
 todo
 
-- build view of posts for main page
-- build post form, put button on main page
-
-- make post comments
 - populate with test comments
-- build view of comments for post pages
-- build comment form for post pages
 
 - add "accept" button
 - email both parties when comment is accepted
@@ -20,8 +14,9 @@ todo
 
 - style landing page
 - style home page
-- style user page
-
+- style own user page
+- style other user page
+- style post page
 
 done
 
@@ -31,3 +26,8 @@ done
 - build view of transaction stream for user page
 - populate with test posts
 - make posts
+- build view of posts for main page
+- build post form, put button on main page
+- make post comments
+- build view of comments for post pages
+- build comment form for post pages
