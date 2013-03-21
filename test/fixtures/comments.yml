@@ -1,0 +1,13 @@
+one:
+  id: 1
+  user_id: 2
+  comment: "I got a really sweet ride and I'll take you"
+  commentable_id: 3
+  commentable_type: "Post"
+
+two:
+  id: 2
+  user_id: 2
+  comment: "Oh, and I won't charge you for gas."
+  commentable_id: 3
+  commentable_type: "Post"

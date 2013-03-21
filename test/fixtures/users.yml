@@ -4,7 +4,7 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-jen:
+fjen:
   id: 1 
   email: "fake1@example.com"
   balance: 115
@@ -15,3 +15,11 @@ bob:
   email: "fak3@example.com"
   balance: 0
   name: "Fake Bob"
+
+jen:
+  id: 3
+  uid: 1218195
+  provider: "facebook"
+  email: "jenstrumental@gmail.com"
+  balance: 0
+  name: "Jen Kelly"

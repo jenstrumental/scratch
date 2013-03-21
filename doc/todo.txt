@@ -11,6 +11,8 @@ todo
 - build views for reviews
 
 - differentiate own page and other person's page; all show history of posts and associated transactions, only own page shows system history
+- differentiate archived posts from active ones
+
 
 - style landing page
 - style home page
